@@ -1,4 +1,6 @@
 class Neuron {
+
+    // These WEIGHTS and BIAS are the parameters we can tweak to change our neural network.
     public double[] weights;
     public double bias;
     public Layer prevLayer;
@@ -14,13 +16,8 @@ class Neuron {
     }
 
     public void runCalculation(){
-        // the bias is the "constant" of our linear equation, so let's add it from the beginning
-        val = bias;
-       // we then take the sum of each input, multiplied by its corresponding weight
-        for(int i = 0; i < prevLayer.neurons.length; i++){
-            val += weights[i] * prevLayer.neurons[i].val;
-        }
-        // finally, let's run our value through our activation function
-        val = NeuralNetwork.activationFunction(val);
+        // TODO:
+        // This method should run the linear calculation and set *val* to the result.
+        // Remember, the formula is: (Weight A) x (Input A) + (Weight B) * (Input B) + ... + Bias
     }
 }
